@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="form.css">
+</head>
+
+<body>
+    <form method="post" action="https://www.google.com" id="form_id" onsubmit="return mySubmitFunction()">
+        <fieldset>
+            <legend>Registration Form</legend>
+
+            <div>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" value="" required pattern="[A-Za-z0-9_]{1,10}" aria-describedby="username-format">
+                <span id="username-format" class="hint">(Only letters (either case), numbers, and the underscore; no more than 10 characters)</span>
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="" required aria-describedby="email-format">
+                <span id="email-format" class="hint">Format: mysite@email.com</span>
+            </div>
+
+            <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" value="" required pattern="[A-Za-z]+\s[A-Za-z]+" aria-describedby="name-format">
+                <span id="name-format" class="hint">Format: firstname lastname (only letters)</span>
+            </div>
+
+            <div>
+                <label>Website</label>
+                <input type="url" id="website" name="website" value="" pattern="https?://.+" aria-describedby="url-format">
+                <span id="url-format" class="hint">Format: start with http:// or https:// ... </span>
+            </div>
+
+            <div>
+                <label>Password</label>
+                <input type="password" id="password" name="password" value="" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" aria-describedby="password-format">
+                <span id="password-format" class="hint">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters </span>
+            </div>
+
+            <div>
+                <label>Re-password</label>
+                <input type="password" id="re_password" name="re_password" value="" required>
+                <span id="re_password_dont_match"></span>
+            </div>
+            <div>
+                <input type="checkbox" name="checkbox" value="check" id="checkbox" onclick="checkOnTerms();"> I accept the
+                Terms and Conditions<br>
+            </div>
+            <div class="submit">
+                <input type="submit" value="Submit" name="form_submit" id="submit_id">
+            </div>
+
+        </fieldset>
+    </form>
+    <script type="text/javascript" src="form.js"></script>
+</body>
+
+</html>

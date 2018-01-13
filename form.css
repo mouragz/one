@@ -1,0 +1,74 @@
+body {
+    font-family: Helvetica, Arial;
+    font-size:14px;
+}
+fieldset {
+    border:3px dashed #4F9DB4;
+    padding:10px;
+}
+legend {
+    padding:0 5px;
+    text-align:right;
+}
+fieldset > div {
+    margin:10px 0;
+}
+fieldset > legend + div {
+    margin-top:0;
+}
+fieldset > div:last-child {
+    margin-bottom:0;
+}
+label {
+    display:inline-block;
+    width:170px;
+}
+
+input:required {
+    background:hsl(180, 50%, 90%);
+    border:1px solid #999;
+}
+input:optional {
+    background:hsl(300, 50%, 90%);
+    border:1px dotted hsl(180, 50%, 90%);
+}
+input:valid {
+    background:hsl(120, 50%, 90%);
+    border-color:hsl(120, 50%, 50%);
+}
+
+input:invalid {
+    border-color:hsl(0, 50%, 50%);
+    background:hsl(0, 50%, 90%);
+}
+
+.hint {
+    display:none;
+    font-size:90%;
+}
+
+#re_password_dont_match {
+    display:none;
+    font-size:90%;
+}
+
+input:focus + .hint {
+    display:inline-block;
+    color: #004085;
+}
+
+input[type="submit"] {
+    width:auto;
+    margin-left:170px;
+    background-color: #009FE3;
+    border-radius: 12px;
+    color:white;
+    border: none;
+    padding: 5px 30px;
+    font-size: 14px;
+    cursor: pointer;
+}
+input[type="checkbox"] {
+    width:auto;
+    margin-left:170px;
+}
